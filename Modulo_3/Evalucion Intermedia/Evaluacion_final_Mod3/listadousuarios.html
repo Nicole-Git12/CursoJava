@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSs.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Se crea contenedor div para dar estilo al título del doc. html a travás de css. -->
+    <div class="formcapt">
+        <h1>Lista De usuario.</h1>
+    </div>
+    <!-- Se crea contenedor div para dar responsividad a la pág a través de css -->
+    <div class="col-4 col-s-9 subtitulos4">
+        <!-- Se crea tabla de "Lista de Usuarios" desde la cual se accede a los distintos perfiles señalados
+        atravás, de enlaces los cuales direccionan a uno de tras perfiles: Cliente, Profecional, Administrativo.  -->
+        <table border="1px">
+            <tr>
+                <td>Rut </td>
+                <td>Nombre </td>
+                <td>Apellidos </td>
+                <td>Tipo de Usuario </td>
+                <td>Editar/Eliminar</td>
+
+            </tr>
+            <tr>
+                <td>11111-1</td>
+                <td>Ignacio </td>
+                <td>Hidalgo Peña</td>
+                <td>Cliente</td>
+                <td><a href="editarcliente.html" target="_blank">
+                        <button>editar</button>
+                        <a href="usuarioeliminado.html">
+                            <button>eliminar</button>
+                        </a>
+                        
+            </tr>
+            <tr>
+                <td>2222-2</td>
+                <td>Rodrigo </td>
+                <td>Salas Vielma </td>
+                <td>Profesional</td>
+                <td><a href="editarprofesional.html" target="_blank">
+                        <button>editar</button>
+                        <a href="usuarioeliminado.html">
+                            <button>eliminar</button>
+                        </a>
+            </tr>
+            <tr>
+                <td>3333-3</td>
+                <td>Nicole</td>
+                <td>Navarrete Garrido</td>
+                <td>Administrativo</td>
+                <td><a href="editaradministrativo.html" target="_blank">
+                        <button>editar</button>
+                        <a href="usuarioeliminado.html">
+                            <button>eliminar</button>
+            </tr>
+            <tr>
+                <td>4444-4</td>
+                <td>Rolando </td>
+                <td>Lazcano Figueroa</td>
+                <td>Profesional</td>
+                <td><a href="editarprofesional.html" target="_blank">
+                        <button>editar</button>
+                        <a href="usuarioeliminado.html">
+                            <button>eliminar</button>
+                        </a>
+            </tr>
+
+
+
+        </table>
+    </div>
+    <!-- Se crea contenedor div para dar responsividad a enlace que direcciona a pág. principal. -->
+    <div class="col-4 col-s-2 links">
+        <ul><a href="index.html" target="_blank"><button> Presiona aqui para volver a la pagina principal</button></a>
+        </ul>
+    </div>
+
+</body>
+
+</html>

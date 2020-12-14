@@ -1,0 +1,33 @@
+ +++++++++++++++++EVALUACIÓN FINAL MÓDULO 3.+++++++++++++++++++
+
+++++++++++++++++Fundamentos de Desarrollo Web+++++++++++++++++++ 
+
+iNTEGRANTES: Rolando Lazcano, Nicole Navarrete, Ignacio Hidalgo.
+
+  La siguiente página web corresponde a la evaluación de caracter grupal
+del tercer módulo correspondiente a "Fundamentos de Desarrollo Web" 
+impartido por la OTEC Awakelab en el marco del programa Talento Digital 
+Para Chile. 
+
+  El ejercicio busca desarrollar y poner en práctica los conocimientos 
+impartidos en clases en lo que respecta a las sigientes tecnologías:
+
+  1.- HTML
+  2.- CSS
+  3.- JAVASCRIPT
+  4.- JQuery.
+
+  Todo lo anterior se intregra a través del desarrollo de una página web
+en la cual interactuan todas las tecnologías anteriormente señaladas.
+
+ El inicio de lá pagina web se inicia con doble click sobre el archivo
+index.html.
+
+GitHub:
+https://github.com/Nicole-Git12/Evalucion-Mod3/tree/main/Evaluacion_final_Mod3
+
+   ***************************  FIN  ****************************** 
+
+  
+
+  

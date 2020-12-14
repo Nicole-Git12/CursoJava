@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 7 - Ejercicio Grupal 10</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    
+    <button id="btncomments">Ver comentarios</button>
+
+    <div id="conttabla"></div>
+
+    <script>
+
+        $("#btncomments").on("click", obtenerComentarios);
+
+        function obtenerComentarios() {
+            $.ajax({
+                url: "https://jsonplaceholder.typicode.com/comments",
+                type: "GET",
+                success: function(cosa) {
+                    var resultado = "<table>";
+                    resultado += "<tr><th>ID</th><th>Email</th></tr>";
+                    //alert("Vamos bien");
+                    console.log(cosa);
+                    for (var i=0;i<cosa.length;i++){
+                        resultado += "<tr><td>" + cosa[i].id + "</td><td>" 
+                        + cosa[i].email + "</td></tr>";
+                    }
+                    resultado += "</table>";
+                    $("#conttabla").html(resultado);
+                },
+                error: function() {
+                    console.log("No se ha podido obtener la información de los comentarios");
+                }
+            });
+        }
+
+    </script>
+</body>
+</html>

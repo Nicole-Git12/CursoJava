@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>document</title>
+  <link rel="stylesheet" href="CSs.css">
+  <script type="text/javascript">
+    // Se crea función para procesar los checklist.
+    function myboxes() {
+
+      var text = document.getElementById("text1");
+
+      var checkboxes = document.getElementById("dat1");
+      var cont = 0;
+
+      if (checkboxes.checked == true) {
+        text.style.display = "block";
+        cont++;
+      }
+      else {
+        text.style.display = "none";
+      }
+
+      var text = document.getElementById("text2");
+
+      var checkboxes = document.getElementById("dat2");
+      var cont = 0;
+
+      if (checkboxes.checked == true) {
+        text.style.display = "block";
+        cont++;
+      }
+      else {
+        text.style.display = "none";
+      }
+      var text = document.getElementById("text3");
+
+      var checkboxes = document.getElementById("dat3");
+      var cont = 0;
+
+      if (checkboxes.checked == true) {
+        text.style.display = "block";
+        cont++;
+      }
+      else {
+        text.style.display = "none";
+      }
+      var text = document.getElementById("text4");
+
+      var checkboxes = document.getElementById("dat4");
+      var cont = 0;
+
+      if (checkboxes.checked == true) {
+        text.style.display = "block";
+        cont++;
+      }
+      else {
+        text.style.display = "none";
+      }
+    }
+
+  </script>
+</head>
+
+<body>
+  <!-- Se crea div y class para dar estilo a título del doc html.  -->
+  <div class="formcapt">
+    <h1>Responder Check List.</h1>
+  </div>
+  <!-- Se crea div y clase para dar responsividad al checklist del doc. html  -->
+  <div class="col-2 col-s-9 subtitulos4">
+    <form class="selector">
+      <table border="1px">
+
+        <tr>
+          <td>Deberes a cumplir</td>
+          <td> check</td>
+        </tr>
+        <tr>
+          <td> señaletica de escape</td>
+          <td><input id="dat1" type="checkbox"></td>
+        </tr>
+        <tr>
+          <td>escaleres de emergencias con iluminacion
+  </div>
+  </td>
+  <td><input id="dat2" type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>las escaleras tienes material antideslizante </td>
+    <td><input id="dat3" type="checkbox"></td>
+  </tr>
+  <tr>
+    <td>los extintores tienen su revision anual</td>
+    <td><input id="dat4" type="checkbox"></td>
+  </tr>
+
+
+  <td><input type="button" value="confirmar" onclick="myboxes()">
+
+    </div> <input type="reset" name=" cancelar seleccion"></td>
+  </form>
+  </table>
+
+  <!-- 1.- Se crea div para estilo con css,
+       2.- Se imprime las opciones marcadas en el checklist.  -->
+
+  <div id="nuevalista">
+    <ul>
+      <p id="text1" style="display: none">*Instalar señaletica</p>
+      <p id="text2" style="display: none">*Mejorar iluminacion</p>
+      <p id="text3" style="display: none">*Instalar antideslizante</p>
+      <p id="text4" style="display: none">*Cambiar extintores</p>
+
+    </ul>
+
+  </div>
+
+</body>
+
+</html>

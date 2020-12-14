@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+        body{
+            background-color :rgb(195, 245, 102);
+        }
+     </style>  
+
+    <style>
+        input.error,
+        select.error,
+        textarea.error {
+            border: 3px solid red;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#formfactura").validate({
+                rules: {
+                    txtidfact: {
+                        required: true,
+                        min: 1,
+                        max: 10000
+                    },
+                    txtidventa: {
+                        required: true,
+                        min: 1,
+                        max: 1000
+                    },
+                    txtfechagen:{
+                        required: true
+                    }
+                },
+                messages: {
+                    txtidfact: {
+                        required: "Ingrese el ID de factura",
+                        min: "Debe ser un número mayor o igual a 1",
+                        max: "Debe ser un número menor a 10000"
+                    },
+                    txtidventa: {
+                        required: "Ingrese el ID de venta",
+                        min: "Debe ser un número mayor o igual a 1",
+                        max: "Debe ser un número menor a 1000"
+                    },
+                    txtfechagen: {
+                        required: "Debe indicar una fecha de generación"
+                    }
+                }
+		    });
+
+            $("#txtfechagen").datepicker(
+                {dateFormat: "yy-mm-dd"}
+            );
+
+        });
+    </script>
+
+</head>
+<body>
+    
+    <h1>Crear factura</h1>
+
+    <form id="formfactura" method="get" action="">
+        ID Factura: <input type="text" name="txtidfact" id="txtidfact" /><br/>
+        ID Venta: <input type="text" name="txtidventa" id="txtidventa" /><br/>
+        Fecha generación: <input type="text" name="txtfechagen" id="txtfechagen" readonly /><br/>
+        Fecha pago: <input type="text" name="txtfechapago" id="txtfechapago" /><br/>
+        Subtotal: <input type="text" name="txtsubtotal" id="txtsubtotal" /><br/>
+        Impuesto: <input type="text" name="txtimpuesto" id="txtimpuesto" /><br/>
+        Total: <input type="text" name="txttotal" id="txttotal" /><br/>
+        <input type="submit" value="Validar">
+    </form>
+
+</body>
+</html>

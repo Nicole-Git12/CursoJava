@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Administrativo</title>
+ <link rel="stylesheet" href="CSs.css">;
+</head>
+<body>
+    <div class="formcapt">
+    <h1>INGRESAR ADMINISTRATIVO</h1>
+</div>
+    <div class="col-6 col-s-9 subtitulos">
+            <table>  
+    
+        <form action="ejemplo.php" method="get">
+        <td><label for="Run">Run</label></td>
+        <td><input type="text"name="Run"></td>
+        <tr>
+        <td><label for="Nombre">Nombre</label></td>
+        <td><input type="text"name="Nombre"></td>
+    </tr>
+    <tr>
+        <td><label for="Apellido">Apellido</label></td>
+        <td><input type="text"name="Apellido"></td>
+        </tr>
+       <tr>
+        <td><label for="Correo electronico"> Correo electronico:</label></td>
+        <td><input type="text"name="Correo electronico"></td>
+    </tr>
+    <tr>
+        <td><label for="Area">Area</label></td>
+        <td><input type="text"name="Area"></td>
+    </tr>
+    <tr>
+       
+    </tr>
+         
+        </p>
+      </form>
+    
+    </table> 
+    <input  type="submit" value="Enviar">
+    <input type="reset" value="Borrar">
+</div>
+<div class="col-6 col-s-2 links">
+<ul><a href="index.html"target="_blank">Presiona aqui para volver a la pagina principal</a></ul>
+</div>
+    
+
+    
+</body>
+</html>

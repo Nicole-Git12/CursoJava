@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ListadoCategorias</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <style>
+        body{
+            background-color :rgb(206, 184, 248);
+        }
+    </style>
+    <script>
+        $(function () {
+            $("#resizable").resizable();
+        });
+
+        $(function () {
+            $("#accordion").accordion({
+                collapsible: true
+            });
+        });
+
+        $(function () {
+            $("#dialog").dialog({
+                autoOpen: false,
+                show: {
+                    effect: "blind",
+                    duration: 1000
+                },
+                hide: {
+                    effect: "explode",
+                    duration: 1000
+                }
+            });
+
+            $("#opener").on("click", function () {
+                $("#dialog").dialog("open");
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <div>
+        <textarea id="resizable" class="ui-widget-header">Buscar Propiedades...</textarea>
+    </div>
+
+    <div id="accordion">
+        <h3>1.-Casas</h3>
+        <div>
+            <p>Conocemos el estado del mercado inmobiliario local para vender mejor tú casa. Ponemos un precio justo , sabemos el  precio del m2,
+                te regalamos una tasación, fijamos el precio de venta de las casas en la zona. 
+                Publicamos tu casa por Internet para ponerla a la venta, asesorandote  con los trámites para vender tu casa te informamos de pago de impuestos (Impto de Plusvalia). 
+                Te registramos la propiedad, te asesoramos con  todos los documentos , los permisos,gastos notariales, contrato, etc
+                Nuestros Honorarios son deacuerdo al  mercado 2% +IVA. 
+                Caracteristicas de la Propiedad: </p>
+
+                <ul>
+                    <li>Casas tipo Aisladas.</li>
+                    <li>Casas tipo Pareada .</li>
+                    <li>Casas Continua.</li>
+                </ul>   
+        </div>
+        <h3>2.-Oficinas y Locales Comerciales</h3>
+        <div>
+            <p>Recepcionamos y Vendemos una variedad de Oficinas , Locales comerciales , Arriendos de Bodegas ,  
+                Terrenos  Industriales , Sitios rurales  para la compra y venta en toda la Quinta Region con las mejores ubicaciones 
+                en zonas estrategicas  y de gran conectividad. 
+                Caracteristicas de la Propiedad:</p>
+                <ul>
+                    <li>Locales : Peluquerias, Panaderias ,Talleres  .</li>
+                    <li>Galerias , Centro Comerciales , Oficinas .</li>
+                    <li>Bombas Bencineras , Bodegas, Sitios rurales .</li>
+                </ul>   
+
+        </div>
+        <h3>3.-Departamentos </h3>
+        <div>
+            <p>Invierte en la Quinta Region a distancia  desde  donde quieras !Gran conectividad e ideal para el corretaje de propiedades para invertir . Te presentamos los proyectos que mejor se adecúan a tu perfil y te asesoramos.. Realizamos tours virtuales.
+                Te llevamos los documentos legales a la notaría de tu ciudad para que los firmes. Puedes pagar a través de internet. Todo sin moverte de tu casa.
+                </p>
+            <ul>
+                <li>Departamento tipo Loft.</li>
+                <li>Departamento Piso Horizontal (PH).</li>
+                <li>Departamento Monoambiente</li>
+            </ul>
+        </div>
+        <h3>4.-Parcelas </h3>
+        <div>
+            <p>Invierte comprando Hermosas Parcelas en el sector de Limache !!! desde  5000 mts2 , con rol propio , con agua atraves de pozo
+                 o camión aljibe , luz por medio de paneles solares, cuenta con cierre perimetral completo, portón de acceso. Construida en madera , con piscina y arboles frutales .
+                  Disfruta de la tranquilida y aire puro con excelente conectividad y valor turístico.
+                  Caracteristicas de la Propiedad:
+                 
+                </p>
+            <ul>
+                <li>Parcelas Planas.</li>
+                <li>Parcelas Semiplanas.</li>
+                <li>Parcela Ecologicas </li>
+            </ul>
+        </div>
+    </div>
+    <br>
+
+    <div id="dialog" title="Listado">
+        <p>Propiedades -Cantidad de Propiedades.<br> &apos;check.&apos; list:<br>Casas: 20 paravta<br> Departamentos: 25 arriendo<br>Depto Loft: 10 paravta<br>Local Comercial: 30  arriendo<br>Oficinas: 50  arriendo<br>Terrenos Industriales: 3  paravta<br>Parcelas:10  paravta<br> </p>
+      </div>
+       
+      <button id="opener">Open Dialog</button>
+
+
+
+</body>
+
+</html>

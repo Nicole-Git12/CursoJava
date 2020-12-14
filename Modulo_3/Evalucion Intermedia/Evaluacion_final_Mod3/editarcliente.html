@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSs.css">
+    
+    
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="CLIENTEVAL.JS"></script>   
+
+
+
+
+
+    <title>editarcliente</title>
+</head>
+
+<body>
+    <!-- Se crea contenedor div para dar estilo css -->
+    <div class="formcapt">
+        <h1>Editar Cliente.</h1>
+    </div>
+
+    <form id="ingresocliente">
+        <!-- Se crea div para dar responsividad a través de css a la pág. -->
+        <div class="col-6 col-s-9 subtitulos4">
+            <table>
+
+                <td><label for="RUN">RUN</label></td>
+                <td><input type="text" name="RUN"></td>
+                <tr>
+                    <td><label for="Nombre">Nombres</label></td>
+                    <td><input type="text" name="Nombre"></td>
+                </tr>
+                <tr>
+                    <td><label for="Apellidos">Apellidos</label></td>
+                    <td><input type="text" name="Apellidos"></td>
+                </tr>
+                <tr>
+                    <td><label for="Telefono">Teléfono</label></td>
+                    <td><input type="text" name="Telefono"></td>
+                </tr>
+                <tr>
+                    <td><label for="AFP">AFP</label></td>
+                    <td><input type="text" name="AFP"></td>
+                </tr>
+                <tr>
+                    <td><label for="Sistema">Sistema de Salud</label></td>
+                    <td><input type="texto" name="Sistema"></td>
+                </tr>
+                <tr>
+                    <td><label for="direccion">Dirección:</label></td>
+                    <td><input type="text" name="direccion"></td>
+                </tr>
+                <tr>
+                    <td><label for="comuna">Comuna</label></td>
+                    <td><input type="text" name="comuna"></td>
+                </tr>
+                <tr>
+                    <td><label for="edad">Edad</label></td>
+                    <td><input type="text" name="edad"></td>
+                </tr>
+
+                <div>
+                    <td><input type="submit" id="bEnviar" value="Enviar"></td>
+                    <td><input type="reset" value="Borrar"></td>
+                </div>
+
+            </table>
+
+        </div>
+
+    </form>
+    <!-- Se crea div para dar estilo a través de css a enlace que direcciona este html a pág. principal.  -->
+    <div class="col-4 col-s-2 links">
+        <ul><a href="index.html" target="_blank">Presiona aqui para volver a la pagina principal</a></ul>
+        <ul><a href="listadousuarios.html" target="_blank">Presiona aqui para volver a la Lista</a></ul>
+
+    </div>
+
+</body>
+
+</html>

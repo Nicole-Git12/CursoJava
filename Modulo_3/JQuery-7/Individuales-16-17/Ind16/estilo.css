@@ -1,0 +1,27 @@
+
+body{
+    background-color :rgb(123, 218, 159);
+}
+body{
+background-color: rgb(213, 142, 241);
+color: crimson;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-size: 16px;
+}
+
+p{
+border: solid 2px blueviolet;
+background-color: darkcyan;
+color: rgb(15, 1, 17);
+font-weight: bold;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.boton {
+width: 300px;
+height: 100px;
+background-color:greenyellow;
+color: red;
+}
+
+

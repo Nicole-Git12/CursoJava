@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 8 - Ejercicio Grupal 11</title>
+    <script src="https://www.chartjs.org/dist/2.9.4/Chart.min.js" ></script>
+    <script src="https://www.chartjs.org/samples/latest/utils.js" ></script>
+</head>
+<body>
+    
+    <div id="container" style="width: 75%;">
+		<canvas id="canvas"></canvas>
+	</div>
+    
+    <script>
+		var MONTHS = ['Comuna 1', 'Comuna 2', 'Comuna 3', 'Comuna 4'];
+		var color = Chart.helpers.color;
+		var barChartData = {
+			labels: ['Comuna 1', 'Comuna 2', 'Comuna 3', 'Comuna 4'],
+			datasets: [{
+				label: 'Clientes',
+				backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
+				borderColor: window.chartColors.red,
+				borderWidth: 1,
+				data: [
+					randomScalingFactor(),
+					randomScalingFactor(),
+					randomScalingFactor(),
+					randomScalingFactor()
+				]
+			}, {
+				label: 'Ventas',
+				backgroundColor: color(window.chartColors.blue).alpha(0.5).rgbString(),
+				borderColor: window.chartColors.blue,
+				borderWidth: 1,
+				data: [
+					randomScalingFactor(),
+					randomScalingFactor(),
+					randomScalingFactor(),
+					randomScalingFactor()
+				]
+			}]
+
+		};
+
+		window.onload = function() {
+			var ctx = document.getElementById('canvas').getContext('2d');
+			window.myBar = new Chart(ctx, {
+				type: 'bar',
+				data: barChartData,
+				options: {
+					responsive: true,
+					legend: {
+						position: 'top',
+					},
+					title: {
+						display: true,
+						text: 'Gráfico de barras'
+					}
+				}
+			});
+
+		};
+    </script>
+</body>
+</html>

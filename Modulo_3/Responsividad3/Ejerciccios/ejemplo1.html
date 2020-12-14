@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 1 Responsividad</title>
+
+    <style>
+        .left{
+            float: left;
+            width: 20%;
+            background-color: blue;
+            height: 300px;
+        }
+
+        .main{
+            float: left;
+            width: 60%;
+            background-color: azure;
+            height: 300px;
+        }
+
+        .right{
+            float: left;
+            width: 20%;
+            background-color: red;
+            height: 300px;
+        }
+
+        @media screen and (max-width: 800px){
+            .left, .right, .main{
+                width: 100%;
+            }
+        }
+
+
+    </style>
+
+</head>
+<body>
+    
+    <aside class="left">
+        Columna izquierda
+    </aside>
+    <section class="main">
+        Sección central
+    </section>
+    <article class="right">
+        Columna derecha
+    </article>
+
+</body>
+</html>

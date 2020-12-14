@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 6 - Ejercicio Individual 13</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    
+    <style>
+
+        body{
+            background-color: burlywood;
+            color: crimson;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 16px;
+        }
+
+        p{
+            border: solid 2px blueviolet;
+            background-color: darkcyan;
+            color: yellow;
+            font-weight: bold;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        div{
+            text-align: center;
+        }
+
+        .boton {
+            width: 200px;
+            height: 50px;
+            background-color: blueviolet;
+            color: white;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <h1>Página de mi negocio</h1>
+
+    <div>
+        <button id="despliega">Desplegar secciones</button>
+    </div>
+
+    <h3>Sección 1</h3>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus odio velit quia deleniti fugiat ipsam voluptatibus accusamus quis neque necessitatibus quos voluptate, unde nobis? Fugit mollitia sapiente cum nobis placeat.</p>
+    <div>
+        <a data-fancybox="gallery" href="foto-1.jfif"><img src="foto-1-thumb.jfif"></a>
+    </div>
+
+    <h3>Sección 2</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur assumenda perferendis hic voluptate ex, esse labore voluptatum nam mollitia, natus odio praesentium dolores fugit nemo inventore quam excepturi magnam ipsum?</p>
+    <div>
+        <a data-fancybox="" data-options='{"iframe" : {"css" : {"width" : "80%", "height" : "80%"}}}' href="https://www.google.com/maps/search/?api=1&query=centurylink+field" class="btn btn-primary">Open demo</a>
+    </div>
+
+    <h3>Sección 3</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora fugiat suscipit sed commodi? Hic suscipit ducimus quam aspernatur sequi similique omnis et ex recusandae, provident quis perspiciatis molestias voluptates voluptate.</p>
+    <div>
+        <a class="boton" data-fancybox href="https://www.youtube.com/watch?v=J---aiyznGQ">
+            Ver video del gatito 
+        </a>
+    </div>
+
+    <script>
+        $(document).ready(
+            function(){
+
+                $("p").click(
+                    function(){
+                        $(this).fadeOut(2000);
+                    }
+                );
+
+                $("#despliega").click(
+                    function(){
+                        $("p").fadeIn(1000);
+                    }
+                );
+
+            }
+        );
+    </script>
+
+</body>
+</html>

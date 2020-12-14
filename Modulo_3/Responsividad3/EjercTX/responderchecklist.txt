@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responderchecklist</title>
+    <link rel="stylesheet" href="CSs.css">
+</head>
+<body>
+    <h1>Responder Check List.</h1>
+
+    <div class="check">
+
+        <form action="../../form-result.php" method="post" target="_blank" class="check">
+            <p>
+              Chequeos:<br>
+              <input type="checkbox" name="check1" value="OK"> Chequeo 1<br>
+              <input type="checkbox" name="check2" value="OK"> Chequeo 2<br>
+              <input type="checkbox" name="check3" value="OK"> Chequeo 3<br>
+            </p>
+            <p><input type="submit" value="Enviar datos"></p>
+        </form>
+
+    </div>
+
+    
+</body>
+</html>

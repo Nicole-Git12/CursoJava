@@ -1,0 +1,21 @@
+Grupal 13 GitHub
+
+Pasos realizados:
+
+1.- Creacion de cuenta Github y descarga de aplicacion.
+
+2.- El lider de equipo crea una organizacion, en donde se invita a los 2 miembros del grupo.
+
+3.- El lider administra los permisos a los integrantes, de manera que los miembros puedan crear un pull request,
+asi el lider puede verificar el cambio y verificarlo. Si este se acepta el cambio de la branch se realiza en el main.
+
+@Juvenalcg
+Juvenalcg committed 1 hour ago 
+
+<h2><u>CAMBIO4</u></h2>
+  <h2><u>CAMBIO5</u></h2>
+
+4.-Se adjunta https://github.com/Grupo-5-awakelab/-Desarrollo-web-grupal-org
+
+el cambio es realizado en la linea 32.
+

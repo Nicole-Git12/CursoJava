@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso</title>
+
+    
+    
+    <script>
+        function enviarFormulario() {
+            valor1 = document.getElementById("USUARIO").value;
+            valor2 = document.getElementById("CONTRASEÑA").value;
+            var COLORUSUARIO = document.getElementById("USUARIO");
+            var COLORCONTRASEÑA = document.getElementById("CONTRASEÑA");
+            var COLORERROR = document.getElementById('ERROR');
+            cont = 0
+
+            if (valor1 == null || valor1 == '') {
+                alert("[ERROR] Falta ingresar Usuario");
+                COLORUSUARIO.style.backgroundColor = "red";
+                cont++;
+
+            }
+            if (USUARIO.value == "Admin" || CONTRASEÑA.value == "1234") {
+
+
+            } else {
+
+                alert("[ERROR] Usuario o Contraseña incorrecta");
+                COLORCONTRASEÑA.style.backgroundColor = "red";
+                cont++;
+            }
+            if (cont == 0) {
+                alert("Datos Ingresados correctamente")
+                window.location.href = agregarcliente.html;
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>  
+       
+    <h1> Datos</h1>
+    <table>
+        <form action="agregarcliente.html">
+
+            <tr>
+                <td><label for="USUARIO">Usuario</label></td>
+                <td><input type="texto" id="USUARIO"></td>
+            </tr>
+            <tr>
+                <td><label for="CONTRASEÑA">CONTRASEÑA</label></td>
+                <td><input type="text" id="CONTRASEÑA"></td>
+            </tr>
+            
+        </form>
+
+    </table>
+    <input type="submit" value="Enviar" onclick="enviarFormulario()">
+    <input type="reset" value="Borrar">
+    
+    <div class="col-6 col-s-2 links">
+        <ul><a href="agregarcliente.html" target="_blank">Presiona aqui para volver a la pagina principal</a></ul>
+    </div>
+
+
+</body>
+
+</html>

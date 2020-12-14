@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 6 - Ejercicio Individual 13</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    
+    <style>
+
+        body{
+            background-color: burlywood;
+            color: crimson;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 16px;
+        }
+
+        p{
+            border: solid 2px blueviolet;
+            background-color: darkcyan;
+            color: yellow;
+            font-weight: bold;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        div{
+            text-align: center;
+        }
+
+        .boton {
+            width: 200px;
+            height: 50px;
+            background-color: blueviolet;
+            color: white;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <h1>Página de mi negocio</h1>
+
+    <div>
+        <button id="despliega">Desplegar secciones</button>
+    </div>
+
+    <h3>Sección 1</h3>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus odio velit quia deleniti fugiat ipsam voluptatibus accusamus quis neque necessitatibus quos voluptate, unde nobis? Fugit mollitia sapiente cum nobis placeat.</p>
+    <div>
+        <a data-fancybox="gallery" href="foto-1.jfif"><img src="foto-1-thumb.jfif"></a>
+    </div>
+
+    <h3>Sección 2</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur assumenda perferendis hic voluptate ex, esse labore voluptatum nam mollitia, natus odio praesentium dolores fugit nemo inventore quam excepturi magnam ipsum?</p>
+    <div>
+        <button id="botonmapa">Abrir mapa</button>
+        <div style="display:none;"> 
+            <a data-fancybox href="#test" id="linkmapa">Click</a>
+        </div>
+
+        <div id="test" style="display:none;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.333889031345!2d-71.6162912848552!3d-33.04767548089109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689e0dba8555981%3A0x36cda554b57320f!2sParque%20Italia!5e0!3m2!1ses-419!2scl!4v1606851977042!5m2!1ses-419!2scl" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </div>
+
+    <h3>Sección 3</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora fugiat suscipit sed commodi? Hic suscipit ducimus quam aspernatur sequi similique omnis et ex recusandae, provident quis perspiciatis molestias voluptates voluptate.</p>
+    <div>
+        <a class="boton" data-fancybox href="https://www.youtube.com/watch?v=J---aiyznGQ">
+            Ver video del gatito 
+        </a>
+    </div>
+
+    <script>
+        $(document).ready(
+            function(){
+
+                $("p").click(
+                    function(){
+                        $(this).fadeOut(2000);
+                    }
+                );
+
+                $("#despliega").click(
+                    function(){
+                        $("p").fadeIn(1000);
+                    }
+                );
+
+                $("#botonmapa").click(function(){
+                    $("#linkmapa").trigger('click');
+                });
+
+            }
+        );
+    </script>
+
+</body>
+</html>

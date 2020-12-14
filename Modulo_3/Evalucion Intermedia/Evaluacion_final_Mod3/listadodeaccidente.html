@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="listaccival.js"></script>
+    <link rel="stylesheet" href="CSs.css">
+
+    <title>Listado de accidente</title>
+</head>
+
+<body>
+    <!-- Se crea contenedor div para dar clase al título del doc. html. -->
+    <div class="main">
+        <h1>Listado de Accidente.</h1>
+    </div>
+    <div>
+        <!-- Se crea formulario de accidente -->
+        <form id="listacci"> 
+            <!-- Se crea contenedor div para reponsividad. -->
+            <div class="col-6 col-s-9 subtitulos4">
+                <table>
+
+                    <td><label for="IDAC">ID ACCIDENTE</label></td>
+                    <td><input type="text" name="IDAC"></td>
+                    <tr>
+                        <td><label for="FECHACC">FECHA ACCIDENTE</label></td>
+                        <td><input type="date" name="FECHACC"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="HORA">HORA</label></td>
+                        <td><input type="time" name="HORA"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="lugar">LUGAR</label></td>
+                        <td><input type="text" name="lugar"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="origen">ORIGEN</label></td>
+                        <td><input type="text" name="origen"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="CLIENTE">CLIENTE</label></td>
+                        <td><input type="texto" name="CLIENTE"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="consecuencia">CONSECUENCIA:</label></td>
+                        <td><input type="text" name="consecuencia"></td>
+                    </tr>
+
+                </table>
+                <div>
+
+                    <td><input type="submit" id="bEnviar" value="Enviar"></td>
+                    <td><input type="reset" value="Borrar"></td>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

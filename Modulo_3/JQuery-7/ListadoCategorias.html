@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)file:///C:/Users/nicol/Desktop/listadocategoria.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ListadoCategorias</title>
+    <link rel="stylesheet" href="./ListadoCategorias_files/jquery-ui.css">
+    <script src="./ListadoCategorias_files/jquery-1.12.4.js.descargar"></script>
+    <script src="./ListadoCategorias_files/jquery-ui.js.descargar"></script>
+    <style>
+        body{
+            background-color :rgb(206, 184, 248);
+        }
+    </style>
+    <script>
+        $(function () {
+            $("#resizable").resizable();
+        });
+
+        $(function () {
+            $("#accordion").accordion({
+                collapsible: true
+            });
+        });
+
+        $(function () {
+            $("#dialog").dialog({
+                autoOpen: false,
+                show: {
+                    effect: "blind",
+                    duration: 1000
+                },
+                hide: {
+                    effect: "explode",
+                    duration: 1000
+                }
+            });
+
+            $("#opener").on("click", function () {
+                $("#dialog").dialog("open");
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <div>
+        <div class="ui-wrapper" style="overflow: hidden; position: relative; width: 169px; height: 37px; top: 0px; left: 0px; margin: 0px; padding-right: 7px; padding-bottom: 16px;"><textarea id="resizable" class="ui-widget-header ui-resizable" style="margin: 0px; resize: none; position: static; zoom: 1; display: block; height: 31px; width: 163px;">Buscar Propiedades...</textarea><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div></div>
+    </div>
+
+    <div id="accordion" class="ui-accordion ui-widget ui-helper-reset" role="tablist">
+        <h3 class="ui-accordion-header ui-corner-top ui-state-default ui-accordion-icons ui-accordion-header-collapsed ui-corner-all" role="tab" id="ui-id-1" aria-controls="ui-id-2" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>1.-Casas</h3>
+        <div class="ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-2" aria-labelledby="ui-id-1" role="tabpanel" aria-hidden="true" style="display: none; height: 193px;">
+            <p>Conocemos el estado del mercado inmobiliario local para vender mejor tú casa. Ponemos un precio justo , sabemos el  precio del m2,
+                te regalamos una tasación, fijamos el precio de venta de las casas en la zona. 
+                Publicamos tu casa por Internet para ponerla a la venta, asesorandote  con los trámites para vender tu casa te informamos de pago de impuestos (Impto de Plusvalia). 
+                Te registramos la propiedad, te asesoramos con  todos los documentos , los permisos,gastos notariales, contrato, etc
+                Nuestros Honorarios son deacuerdo al  mercado 2% +IVA. 
+                Caracteristicas de la Propiedad: </p>
+
+                <ul>
+                    <li>Casas tipo Aisladas.</li>
+                    <li>Casas tipo Pareada .</li>
+                    <li>Casas Continua.</li>
+                </ul>   
+        </div>
+        <h3 class="ui-accordion-header ui-corner-top ui-state-default ui-accordion-icons ui-accordion-header-collapsed ui-corner-all ui-state-focus" role="tab" id="ui-id-3" aria-controls="ui-id-4" aria-selected="false" aria-expanded="false" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>2.-Oficinas y Locales Comerciales</h3>
+        <div class="ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-4" aria-labelledby="ui-id-3" role="tabpanel" aria-hidden="true" style="display: none; height: 193px;">
+            <p>Recepcionamos y Vendemos una variedad de Oficinas , Locales comerciales , Arriendos de Bodegas ,  
+                Terrenos  Industriales , Sitios rurales  para la compra y venta en toda la Quinta Region con las mejores ubicaciones 
+                en zonas estrategicas  y de gran conectividad. 
+                Caracteristicas de la Propiedad:</p>
+                <ul>
+                    <li>Locales : Peluquerias, Panaderias ,Talleres  .</li>
+                    <li>Galerias , Centro Comerciales , Oficinas .</li>
+                    <li>Bombas Bencineras , Bodegas, Sitios rurales .</li>
+                </ul>   
+
+        </div>
+        <h3 class="ui-accordion-header ui-corner-top ui-accordion-header-collapsed ui-corner-all ui-state-default ui-accordion-icons" role="tab" id="ui-id-5" aria-controls="ui-id-6" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>3.-Departamentos </h3>
+        <div class="ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-6" aria-labelledby="ui-id-5" role="tabpanel" aria-hidden="true" style="display: none; height: 193px;">
+            <p>Invierte en la Quinta Region a distancia  desde  donde quieras !Gran conectividad e ideal para el corretaje de propiedades para invertir . Te presentamos los proyectos que mejor se adecúan a tu perfil y te asesoramos.. Realizamos tours virtuales.
+                Te llevamos los documentos legales a la notaría de tu ciudad para que los firmes. Puedes pagar a través de internet. Todo sin moverte de tu casa.
+                </p>
+            <ul>
+                <li>Departamento tipo Loft.</li>
+                <li>Departamento Piso Horizontal (PH).</li>
+                <li>Departamento Monoambiente</li>
+            </ul>
+        </div>
+        <h3 class="ui-accordion-header ui-corner-top ui-accordion-header-collapsed ui-corner-all ui-state-default ui-accordion-icons" role="tab" id="ui-id-7" aria-controls="ui-id-8" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>4.-Parcelas </h3>
+        <div class="ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-8" aria-labelledby="ui-id-7" role="tabpanel" aria-hidden="true" style="display: none; height: 193px;">
+            <p>Invierte comprando Hermosas Parcelas en el sector de Limache !!! desde  5000 mts2 , con rol propio , con agua atraves de pozo
+                 o camión aljibe , luz por medio de paneles solares, cuenta con cierre perimetral completo, portón de acceso. Construida en madera , con piscina y arboles frutales .
+                  Disfruta de la tranquilida y aire puro con excelente conectividad y valor turístico.
+                  Caracteristicas de la Propiedad:
+                 
+                </p>
+            <ul>
+                <li>Parcelas Planas.</li>
+                <li>Parcelas Semiplanas.</li>
+                <li>Parcela Ecologicas </li>
+            </ul>
+        </div>
+    </div>
+    <br>
+
+    
+       
+      <button id="opener">Open Dialog</button>
+
+
+
+
+
+
+<div tabindex="-1" role="dialog" class="ui-dialog ui-corner-all ui-widget ui-widget-content ui-front ui-draggable ui-resizable" aria-describedby="dialog" aria-labelledby="ui-id-9" style="display: none; position: absolute;"><div class="ui-dialog-titlebar ui-corner-all ui-widget-header ui-helper-clearfix ui-draggable-handle"><span id="ui-id-9" class="ui-dialog-title">Listado</span><button type="button" class="ui-button ui-corner-all ui-widget ui-button-icon-only ui-dialog-titlebar-close" title="Close"><span class="ui-button-icon ui-icon ui-icon-closethick"></span><span class="ui-button-icon-space"> </span>Close</button></div><div id="dialog" class="ui-dialog-content ui-widget-content">
+        <p>Propiedades -Cantidad de Propiedades.<br> 'check.' list:<br>Casas: 20 paravta<br> Departamentos: 25 arriendo<br>Depto Loft: 10 paravta<br>Local Comercial: 30  arriendo<br>Oficinas: 50  arriendo<br>Terrenos Industriales: 3  paravta<br>Parcelas:10  paravta<br> </p>
+      </div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div></div></body></html>

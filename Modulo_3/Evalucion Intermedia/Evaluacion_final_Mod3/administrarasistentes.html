@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSs.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
+    <script type="text/javascript" src=""></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+
+
+
+        <!-- Se crea la tabla "Administar Asistentes", en la cual se ingresarán los datos para ser
+        validados a través de J Query. -->
+    <title>Administrar Asistentes</title>
+</head>
+
+<body>
+    <div class="main">
+        <h1>Formulario.</h1>
+    </div>
+    <div>
+        <form id="listaadm">
+            <div class="col-6 col-s-9 subtitulos4">
+                <table>
+                
+                    <td><label for="ID">ID </label></td>
+                    <td><input type="text" name="ID"></td>
+                    <tr>
+                        <td><label for="nombre">Nombre Completo</label></td>
+                        <td><input type="text" name="nombre"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="edad">edada</label></td>
+                        <td><input type="number" name="edad"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="correo">correo</label></td>
+                        <td><input type="email" name="correo"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="telefono">telefono: +569</label></td>
+                        <td><input type="text" name="telefono"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="categoria"> fecha / hora /Asistente.</label></td>
+                        <td><select name="categoria" id="categoria">
+                                <option value=" ">Seleciona fecha y hora /Asistente.</option>
+                                <option value="1 08/12 a las 08:00 hrs.">08/12 a las 08:00 hrs./Piñera</option>
+                                <option value="2 09/12 a las 06:00 hrs.">09/12 a las 06:00 hrs./Homero</option>
+                                <option value="3 10/12 a las 09:00 hrs.">10/12 a las 09:00 hrs./Flanders</option>
+                                <option value="4 11/12 a las 10:00 hrs.">11/12 a las 10:00 hrs./Coraje</option>
+                                <option value="5 12/12 a las 16:00 hrs.">12/12 a las 16:00 hrs./Muriel</option>
+                            </select></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="submit" id="bEnviar" value="Enviar"></td>
+                        <td><input type="reset" value="Borrar"></td>
+                    </tr>
+            
+
+                </table>
+
+            </div>
+
+           
+
+    
+
+            <!-- Se inserta tabla con datos  -->
+    </form>
+    </div>
+    <div class="col-6 col-s-9 subtitulos4">
+    <table id="tabla1" border="1">
+        <thead>
+            <tr>
+                <td>ID </td>
+                <td>Correo </td>
+                <td>Telefono</td>
+                <td>/Eliminar</td>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>121</td>
+                <td>rodrigo@gmail.com </td>
+                <td>+569-88765344</td>
+
+
+                <td><a>
+                        <button>eliminar</button>
+                    </a></td>
+            </tr>
+            <tr>
+                <td>131</td>
+                <td>Diego@gmail.com </td>
+                <td>+569-99965544</td>
+
+
+                <td>
+                    <a><button>eliminar</button></a>
+                </td>
+                
+            </tr>
+            <tr>
+                <td>111</td>
+                <td>pedro@gmail.com </td>
+                <td>+569-55565544</td>
+
+
+                <td>
+                    <a><button>eliminar</button></a>
+                </td>
+                
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+    <!-- Se implementa una función en J Query la cual validará los datos ingresados en los campos de 
+    la tabla "Administrar Asistentes." -->
+
+    <script>
+        $(document).ready(function () {
+            $("#bEnviar").on("click", function () {
+                $("#listaadm").validate
+                    ({
+                        rules:
+                        {
+                            ID: { required: true, digits: true, min: 1, max: 10000 },
+                            nombre: { required: true, minlength: 1, maxlength: 99 },
+                            edad: { required: true, min: 1, max: 150 },
+                            correo: { required: true, email: true },
+                            telefono: { required: true, digits: true, minlength: 8, maxlength: 8 },
+
+
+                        },
+
+                        messages:
+                        {
+                            ID: { required: 'el identificador es requerido', digits: 'ingrese un digito valido', min: 'identificador no valido', max: 'identificador no valido' },
+
+                            nombre: { required: 'el Nombre es requerido', minlength: 'Nombre no valido', maxlength: 'Nombre no valido, máximo 100 caracteres.' },
+                            edad: { required: 'la edad es requerida', min: 'Debe ser mayor de 1 año', max: 'edad no valida, no debe superar los 150 años' },
+                            correo: { required: 'El correo es requerido', email: "Debe ser un correo valido" },
+                            telefono: { required: 'Este campo es requerido', minlength: 'Campo mínimo: 8 numeros.', maxlength: 'Campo máximo: 8 numeros' },
+
+                        }
+                    }
+                    );
+
+            });
+            $('#tabla1').DataTable();
+        });
+
+
+    </script>
+</body>
+
+</html>

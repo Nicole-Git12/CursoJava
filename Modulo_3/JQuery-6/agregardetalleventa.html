@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="lombriz.ico" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="hojacssestilos.css"/>
+        <script type="text/javascript">
+
+            function contar() {
+                var productos = document.getElementById("product").value; //Array que contiene los checkbox
+                var cantidad = parseInt(document.getElementById("cant").value);
+                
+                if (productos == "elige"){
+                    alert("no ha seleccionado producto")
+                } else {
+                    if (cantidad<1 || cantidad>1001){
+                        alert("ingrese una cantidad valida")
+                    } else{
+                        // if (productos == document.getElementById("demo").value){
+                        //     alert("ya ingresaste este producto")
+                        // }else{
+                            document.getElementById("demo").innerHTML += "<li>" + productos+ " n° de articulos "+ cantidad + "</li>";
+                        }
+                    }
+                }
+                 
+            
+
+    
+        </script>
+</head>
+<body>
+    <h1>Agregar Detalle de Venta</h1>
+
+    <form>
+        <table>
+            <tr>
+                <label for="vta">Venta</label>
+                <input type="text" name="vta" id="vta" placeholder="id Venta">
+            </tr>
+            <tr>
+                <label for="product">Producto</label>
+                <select name="product" id="product">
+                    <option value="elige">Elige produto</option>
+                    <option>Vermicompostera tamaño L</option>
+                    <option>Vermicompostera tamaño M</option>
+                    <option>Vermicompostera tamaño S</option>
+                    <option>nucleo de 500 lombrices californianas</option>
+                    <option>nucleo de 250 lombrices californianas</option>
+                    <option>nucleo de 150 lombrices californianas</option>
+                    <option>Humus de lombriz saco 25kg</option>
+                    <option>Humus de lombriz saco 15kg</option>
+                    <option>Humus de lombriz saco 1.5kg</option>
+                </select>
+            </tr>
+            <tr>
+                <label for="cant">Cantidad</label>
+                <input type="number" name="cant" id="cant"  placeholder="N° de articulos...">
+            </tr>
+            <td style="text-align: center;"><input type="button" onclick="contar();" value="Procesar" id="proc"></td>
+        </table>
+
+    </form>
+
+
+    <Div>
+        <h1>Productos y cantidad vendidos</h1>
+        <ul id="demo">
+
+
+        </ul>
+
+    </Div>
+
+</body>
+</html>

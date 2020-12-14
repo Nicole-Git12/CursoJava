@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Listarventas </title>
+    <link rel="stylesheet" href="http://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    
+    <style>
+        body{
+            background-color :rgb(123, 218, 159);
+        }
+     </style>  
+
+    
+    <script>
+
+        $(document).ready(function () {
+            $('#tblistarventas').DataTable({
+                language: {
+                    url: 'https://cdn.datatables.net/plug-ins/1.10.22/i18n/Spanish.json'
+                }
+            });
+        });
+
+    </script>
+
+    <script type="text/javascript">
+
+        function contar() {
+            var checkboxes = document.getElementById("form1").checkbox; //Array que contiene los checkbox
+
+            var cont = 0; //Variable que lleva la cuenta de los checkbox pulsados
+
+            for (var x = 0; x < checkboxes.length; x++) {
+                if (checkboxes[x].checked) {
+                    cont = cont + 1;
+                }
+            }
+
+            if (cont == 0) {
+
+                alert("Error no se han seleccionados Ventas para eliminar");
+            }
+            else {
+
+                alert("Se han eliminado " + cont + " Venta(s)");
+
+            }
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+    
+    <hr />
+    <form id="form1" method="post" action="#">
+        <table id='tblistarventas' class='display' style='width:100%' border="1">
+            <thead>
+                <tr>
+                    <th>ID Ventas</th>
+                    <th>Nombre del Vendedor</th>
+                    <th>Subtotal</th>
+                    <th>Impuestos</th>
+                    <th>Total de Ventas</th>
+                    <th>Eliminar Ventas</th>
+                    <th>Agregar Productos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Bella </td>
+                    <td>15000</td>
+                    <td>5000</td>
+                    <td>20000</td>
+                    <td><input type="checkbox" name="checkbox"></td>
+                    <td><input type="button" value="Agregar producto"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Aurora</td>
+                    <td>20000</td>
+                    <td>5000</td>
+                    <td>25000</td>
+                    <td><input type="checkbox" name="checkbox"></td>
+                    <td><input type="button" value="Agregar producto"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Valiente</td>
+                    <td>30000</td>
+                    <td>5000</td>
+                    <td>35000</td>
+                    <td><input type="checkbox" name="checkbox"></td>
+                    <td><input type="button" value="Agregar producto"></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Modesto</td>
+                    <td>40000</td>
+                    <td>5000</td>
+                    <td>45000</td>
+                    <td><input type="checkbox" name="checkbox"></td>
+                    <td><input type="button" value="Agregar producto"></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Blanca Nieves</td>
+                    <td>50000</td>
+                    <td>5000</td>
+                    <td>55000</td>
+                    <td><input type="checkbox" name="checkbox"></td>
+                    <td><input type="button" value="Agregar producto"></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Ariel</td>
+                    <td>60000</td>
+                    <td>5000</td>
+                    <td>65000</td>
+                    <td><input type="checkbox" name="checkbox"></td>
+                    <td><input type="button" value="Agregar producto"></td>
+                </tr>
+            </tbody>
+
+
+        </table>
+
+        <input type="button" onclick="contar();" value="Eliminar ventas seleccionadas">
+    </form>
+
+</body>
+
+</html>
